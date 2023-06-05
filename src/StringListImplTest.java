@@ -113,9 +113,26 @@ class StringListImplTest {
 
     @Test
     void clear() {
+        stringList.add("Иванов");
+        stringList.add("Петров");
+        stringList.clear();
+        assertEquals(0, stringList.size());
     }
 
     @Test
     void toArray() {
+        stringList.add("Иванов");
+        stringList.add("Петров");
+        stringList.toArray();
+        assertEquals(stringList.toArray().length, stringList.size());
+        assertNotNull(stringList.toArray());
+    }
+
+    @Test
+    void toArrayNotNull() {
+        stringList.add("Иванов");
+        stringList.add("Петров");
+        stringList.toArray();
+        assertNotNull(stringList.toArray());
     }
 }
