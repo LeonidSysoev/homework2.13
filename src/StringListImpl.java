@@ -110,7 +110,7 @@ public class StringListImpl implements StringList {
     public boolean equals(StringList otherList) {
         nullCheckArray(otherList);
 
-        if (Arrays.equals(array, otherList.toArray())) {
+        if (Arrays.equals(this.toArray(), otherList.toArray())) {
             return true;
         }
         return false;

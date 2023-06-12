@@ -109,15 +109,5 @@ class IntegerListImplTest {
     void IndexNotCorrectExceptionTest() {
         assertThrows(IndexNotCorrectException.class, () -> integerList.add(15, 200));
     }
-    @Test
-    void ArrayLengthExceptionTest() {
-        integerList.add(100);
-        integerList.add(100);
-        integerList.add(100);
-        integerList.add(100);
-        integerList.add(100);
-        integerList.add(100);
-        assertThrows(ArrayLengthException.class, () -> integerList.add(100));
 
-    }
 }
